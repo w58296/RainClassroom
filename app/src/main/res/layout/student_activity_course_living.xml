@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".course.Student_Courses">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/bt_get_slide"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="发布Slide" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="进入讨论"
+            android:id="@+id/bt_to_talk"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="开启弹幕"
+            android:id="@+id/bt_open_talk"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="关闭弹幕"
+            android:id="@+id/bt_close_talk"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="386dp"
+        android:layout_marginTop="40dp">
+
+        <LinearLayout
+            android:id="@+id/course_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <master.flame.danmaku.ui.widget.DanmakuView
+        android:id="@+id/danmaku_view"
+        android:layout_width="match_parent"
+        android:layout_height="318dp"
+        android:layout_marginTop="100dp" />
+
+    <LinearLayout
+        android:id="@+id/operation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Send" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_release_que"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发布题目"
+        android:layout_below="@+id/danmaku_view"/>
+
+    <Button
+        android:id="@+id/bt_release_paper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发布试卷"
+        android:layout_below="@+id/danmaku_view"
+        android:layout_toRightOf="@+id/bt_release_que"/>
+
+    <Button
+        android:id="@+id/bt_release_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始签到"
+        android:layout_below="@+id/danmaku_view"
+        android:layout_toRightOf="@+id/bt_release_paper"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="133dp"
+        android:layout_below="@+id/bt_release_sign"
+        android:text="TextView" />
+</RelativeLayout>
+
+    <!--        android:layout_alignParentBottom="true"-->

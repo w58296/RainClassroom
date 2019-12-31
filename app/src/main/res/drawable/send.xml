@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+    <shape android:shape="rectangle">
+        <!-- 指定圆角矩形的4个圆角半径 -->
+        <corners
+            android:topLeftRadius="8dp"
+            android:topRightRadius="8dp"
+            android:bottomLeftRadius="8dp"
+            android:bottomRightRadius="8dp"
+            />
+        <!-- 指定边框线条的宽度和颜色 -->
+        <stroke
+            android:width="4px"
+            android:color="#707070"
+            />
+    </shape>
+    </item>
+</selector>

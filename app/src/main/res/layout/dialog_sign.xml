@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00FFFFFF">
+
+    <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="200dp"
+            android:background="#FFFFFFFF"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="#ff393a"
+                android:text="正在签到哦~"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"/>
+
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:text="快去听课吧！"
+                android:textSize="20dp"/>
+
+
+        <Button
+                android:id="@+id/btn_sign"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal"
+                android:text="签到"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

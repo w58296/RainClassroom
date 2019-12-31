@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".course.Teacher_MyTalk">
+
+    <LinearLayout  android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <android.support.v7.widget.CardView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/talk_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/blue_rounded_solid"
+                    android:fontFamily="@font/calibri"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="12dp"
+                    android:paddingBottom="8dp"
+                    android:text="SPORTS"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:id="@+id/talk_question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/calibri"
+                    android:text="Introducing two new teams for our Annual Basketball championship!"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 >
+                <TextView
+                    android:id="@+id/talk_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:fontFamily="@font/calibri"
+                    android:text="4d ago"
+                    android:textSize="16sp" />
+                 <ImageView
+                     android:id="@+id/good"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="10dp"
+                     android:layout_centerInParent="true"
+                     android:src="@drawable/good"/>
+                 <TextView
+                     android:id="@+id/good_a"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:fontFamily="@font/calibri"
+                     android:text="1"
+                     android:textSize="16sp" />
+
+                 <ImageView
+                     android:id="@+id/bookmark"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="10dp"
+                     android:layout_centerInParent="true"
+                     android:src="@drawable/bookmark"/>
+            </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="6"
+        android:orientation="vertical">
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_ly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:id="@+id/center1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            </LinearLayout>
+
+        </ScrollView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+    <!--    编辑框-->
+    <LinearLayout  android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/send_message"
+            android:hint="hint：快来一起讨论！"
+            android:layout_weight="7"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/calibri"
+            android:textSize="18sp"
+            android:background="@drawable/send"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            />
+        <!--       //发送按钮-->
+        <Button
+            android:id="@+id/talk_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/red_rounded_solid"
+            android:fontFamily="@font/calibri"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="2dp"
+            android:text="发送" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

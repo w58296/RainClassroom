@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".course.Teacher_TalkMain">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="6"
+        android:orientation="vertical">
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_ly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:id="@+id/center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+                <!--            <android.support.v7.widget.CardView-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                app:cardCornerRadius="4dp"-->
+                <!--                app:cardElevation="4dp"-->
+                <!--                app:cardUseCompatPadding="true"-->
+                <!--                app:contentPadding="16dp">-->
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:orientation="vertical">-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginBottom="8dp"-->
+                <!--                        android:background="@drawable/blue_rounded_solid"-->
+                <!--                        android:fontFamily="@font/calibri"-->
+                <!--                        android:paddingLeft="12dp"-->
+                <!--                        android:paddingTop="8dp"-->
+                <!--                        android:paddingRight="12dp"-->
+                <!--                        android:paddingBottom="8dp"-->
+                <!--                        android:text="SPORTS"-->
+                <!--                        android:textColor="@color/white"-->
+                <!--                        android:textSize="14sp" />-->
+
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginBottom="4dp"-->
+                <!--                        android:fontFamily="@font/calibri"-->
+                <!--                        android:text="Introducing two new teams for our Annual Basketball championship!"-->
+                <!--                        android:textColor="#000000"-->
+                <!--                        android:textSize="16sp" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:fontFamily="@font/calibri"-->
+                <!--                        android:text="4d ago"-->
+                <!--                        android:textSize="14sp" />-->
+                <!--                </LinearLayout>-->
+                <!--            </android.support.v7.widget.CardView>-->
+
+            </LinearLayout>
+
+        </ScrollView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+    <!--    编辑框-->
+    <LinearLayout  android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/send_message"
+            android:hint="hint：快来一起讨论！"
+            android:layout_weight="7"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/calibri"
+            android:textSize="18sp"
+            android:background="@drawable/send"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            />
+        <!--       //发送按钮-->
+        <Button
+            android:id="@+id/talk_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/red_rounded_solid"
+            android:fontFamily="@font/calibri"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="2dp"
+            android:text="发送" />
+
+    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:id="@+id/lin"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:orientation="vertical">-->
+<!--    <Button-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:onClick="reset"-->
+<!--        android:text="reset"/>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_weight="1"-->
+<!--        android:orientation="horizontal">-->
+
+<!--&lt;!&ndash;        <RelativeLayout&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_weight="1">&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/good"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_centerInParent="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_margin="20dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:clickable="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:onClick="good"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:src="@drawable/good"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        </RelativeLayout>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <RelativeLayout&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_weight="1">&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/good2"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_centerInParent="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:clickable="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:onClick="good2"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:src="@drawable/good"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        </RelativeLayout>&ndash;&gt;-->
+<!--&lt;!&ndash;        <RelativeLayout&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_weight="1">&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/collection"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_centerInParent="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:clickable="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:onClick="collection"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:src="@drawable/collection"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        </RelativeLayout>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <RelativeLayout&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_weight="1">&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/bookmark"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_centerInParent="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:clickable="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:onClick="bookmark"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:src="@drawable/bookmark"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        </RelativeLayout>&ndash;&gt;-->
+
+<!--    </LinearLayout>-->
+<!--        -->
+<!--        </LinearLayout>-->
+    </LinearLayout>
+

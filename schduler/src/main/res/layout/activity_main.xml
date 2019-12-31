@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example.rico.calendar.widget.NoSlideDrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dlMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/main_container"/>
+
+    <include layout="@layout/main_menu"/>
+
+</example.rico.calendar.widget.NoSlideDrawerLayout>

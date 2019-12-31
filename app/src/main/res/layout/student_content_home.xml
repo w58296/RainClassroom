@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:context=".Student_Home"
+                tools:showIn="@layout/student_app_bar_home">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:orientation="vertical">
+
+            <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:padding="12dp">
+
+                    <ImageView
+                            android:layout_width="300dp"
+                            android:layout_height="150dp"
+                            android:layout_marginRight="4dp"
+                            android:src="@drawable/student_banner_img"/>
+
+                    <ImageView
+                            android:layout_width="300dp"
+                            android:layout_height="150dp"
+                            android:layout_marginRight="4dp"
+                            android:src="@drawable/student_banner_img"/>
+
+                    <ImageView
+                            android:layout_width="300dp"
+                            android:layout_height="150dp"
+                            android:layout_marginRight="4dp"
+                            android:src="@drawable/student_banner_img"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/student_calibri"
+                    android:text="Daily Schedule"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+            <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/ll_daily_schedule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:fontFamily="@font/student_calibri"
+                        android:text="Ongoing courses"
+                        android:textAlignment="textStart"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:fontFamily="@font/student_calibri"
+                        android:text="View all"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp"/>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="16dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+                    <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="25"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/student_mobile_img"/>
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="75"
+                            android:orientation="vertical">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:fontFamily="@font/student_calibri"
+                                android:text="UX Design - From Wireframe to Prototype logo UX Design"
+                                android:textColor="#000000"
+                                android:textSize="16sp"/>
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/student_calibri"
+                                android:text="Sam Smith"
+                                android:textSize="14sp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:fontFamily="@font/student_calibri"
+                        android:text="Announcements"
+                        android:textAlignment="textStart"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:fontFamily="@font/student_calibri"
+                        android:text="View all"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp"/>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="16dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/student_blue_rounded_solid"
+                            android:fontFamily="@font/student_calibri"
+                            android:paddingLeft="12dp"
+                            android:paddingTop="8dp"
+                            android:paddingRight="12dp"
+                            android:paddingBottom="8dp"
+                            android:text="EXAMS"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"/>
+
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:fontFamily="@font/student_calibri"
+                            android:text="Update on CS8214 - Postponed to next week due to unforeseen circumstances."
+                            android:textColor="#000000"
+                            android:textSize="16sp"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/student_calibri"
+                            android:text="10:40 AM"
+                            android:textSize="14sp"/>
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/student_calibri"
+                    android:text="Categories"
+                    android:textAlignment="textStart"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+            <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="16dp">
+
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_weight="100">
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="25"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/student_ic_school_red_24dp"
+                                android:layout_marginBottom="8dp"/>
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Course"
+                                android:textColor="#000000"
+                                android:fontFamily="@font/student_calibri"
+                        />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_weight="25">
+
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/student_ic_receipt_red_24dp"
+                                android:layout_marginBottom="8dp"/>
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Exam"
+                                android:textColor="#000000"
+                                android:fontFamily="@font/student_calibri"
+                        />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_weight="25">
+
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/student_ic_event_red_24dp"
+                                android:layout_marginBottom="8dp"/>
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Event"
+                                android:textColor="#000000"
+                                android:fontFamily="@font/student_calibri"
+                        />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_weight="25">
+
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/student_ic_history_red_24dp"
+                                android:layout_marginBottom="8dp"/>
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="History"
+                                android:textColor="#000000"
+                                android:fontFamily="@font/student_calibri"
+                        />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>
