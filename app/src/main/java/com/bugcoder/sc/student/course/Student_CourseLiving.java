@@ -24,10 +24,12 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -646,18 +648,21 @@ public class Student_CourseLiving extends AppCompatActivity  implements View.OnC
         }
     }
     private void JSONSign(String responseData) throws IOException {
-        TextView signlisttext = (TextView)findViewById(R.id.textView2);
-        String show = "";
+
+        ListView signlisttext = (ListView)findViewById(R.id.listView2);
+        String show = "已签到学生: \n";
         try {
             JSONObject tempsign = new JSONObject(responseData);
             JSONArray allsign= tempsign.getJSONArray("list");
             for(int i=0;i<allsign.length();i++){
                 show += allsign.getString(i);
                 if(i!=allsign.length()-1){
-                    show+="\n";
+                    show+=" ";
                 }
             }
-            signlisttext.setText(show);
+            String data[] = show.split(" ");
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,data);
+            signlisttext.setAdapter(adapter);
 
         } catch (JSONException e) {
             e.printStackTrace();

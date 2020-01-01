@@ -137,8 +137,8 @@
         android:layout_below="@+id/danmaku_view"
         android:layout_toRightOf="@+id/bt_release_paper"/>
 
-    <TextView
-        android:id="@+id/textView2"
+    <ListView
+        android:id="@+id/listView2"
         android:layout_width="match_parent"
         android:layout_height="133dp"
         android:layout_below="@+id/bt_release_sign"
