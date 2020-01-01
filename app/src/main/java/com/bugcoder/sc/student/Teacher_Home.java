@@ -376,7 +376,7 @@ public class Teacher_Home extends AppCompatActivity
             //Intent intent = new Intent(getApplicationContext(), example.rico.calendar.activity.MainActivity.class);
             //startActivity(intent);
         } else if (id == R.id.nav_logout) {
-            Intent intent = new Intent(getApplicationContext(), Teacher_LoginScreen.class);
+            Intent intent = new Intent(getApplicationContext(), Student_LoginScreen.class);
             intent.putExtra("stuId",stuId);
             startActivity(intent);
             finish();
