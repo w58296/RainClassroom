@@ -1,6 +1,7 @@
 package com.bugcoder.sc.student;
 
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -57,6 +58,16 @@ public class Student_Home extends AppCompatActivity
         stuId = temp.getStringExtra("stuId");
         System.out.println("stuId::::::::::::::::::::::::::::::::::");
         System.out.println(stuId);
+        //        System.out.println("到这里");
+        MyReceiver dynamicReceiver  = new MyReceiver();
+        IntentFilter dynamic_filter = new IntentFilter();
+        dynamic_filter.addAction("com.bugcoder.sc.student.myreceiver");
+        registerReceiver(dynamicReceiver, dynamic_filter);
+
+        Intent intent = new Intent("com.bugcoder.sc.student.myreceiver");
+        intent.putExtra("name", "通知");
+//        System.out.println("---------------发送动态广播");
+        sendBroadcast(intent);
 
         initData();
         initUI();

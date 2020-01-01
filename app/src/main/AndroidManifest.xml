@@ -59,7 +59,7 @@
             android:configChanges="orientation|screenSize"
             android:theme="@style/MyAppTheme" />
         <activity
-            android:name=".Student_LoginScreen"
+            android:name=".SplashActivity"
             android:configChanges="orientation|screenSize"
             android:theme="@style/MyAppTheme">
             <intent-filter>
@@ -122,6 +122,10 @@
             android:configChanges="orientation|screenSize"
             android:theme="@style/MyAppTheme" />
         <activity
+            android:name="com.bugcoder.sc.student.Student_LoginScreen"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyAppTheme" />
+        <activity
             android:name=".course.Teacher_MyTalk"
             android:configChanges="orientation|screenSize"
             android:label="讨论区" />
@@ -176,6 +180,16 @@
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="behind"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.bugcoder.sc.student.myreceiver" />
+            </intent-filter>
+        </receiver>
+        <activity android:name=".GuideActivity"/>
+
     </application>
 
 </manifest>

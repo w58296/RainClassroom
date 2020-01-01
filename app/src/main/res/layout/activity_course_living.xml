@@ -8,15 +8,15 @@
     tools:context=".course.Teacher_Courses">
 
     <LinearLayout
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
 
         <Button
-            android:layout_marginLeft="10dp"
             android:id="@+id/bt_get_slide"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
             android:background="@drawable/student_red_rounded_solid"
             android:fontFamily="@font/student_calibri"
             android:text="获取Slide"
@@ -24,10 +24,10 @@
             android:textColor="#ffffff" />
 
         <Button
-            android:layout_marginLeft="10dp"
             android:id="@+id/bt_to_talk"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
             android:background="@drawable/student_red_rounded_solid"
             android:fontFamily="@font/student_calibri"
             android:text="进入讨论"
@@ -35,10 +35,10 @@
             android:textColor="#ffffff" />
 
         <Button
-            android:layout_marginLeft="10dp"
             android:id="@+id/bt_open_talk"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
             android:background="@drawable/student_red_rounded_solid"
             android:fontFamily="@font/student_calibri"
             android:text="开启弹幕"
@@ -46,21 +46,24 @@
             android:textColor="#ffffff" />
 
         <Button
-            android:layout_marginLeft="10dp"
             android:id="@+id/bt_close_talk"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
             android:background="@drawable/student_red_rounded_solid"
             android:fontFamily="@font/student_calibri"
             android:text="关闭弹幕"
             android:textAllCaps="false"
             android:textColor="#ffffff" />
+
     </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="40dp">
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="176dp">
 
         <LinearLayout
             android:id="@+id/course_list"
@@ -100,6 +103,42 @@
             android:layout_height="match_parent"
             android:text="Send" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/but_share"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="207dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="501dp"
+        android:background="@drawable/student_red_rounded_solid"
+        android:fontFamily="@font/student_calibri"
+        android:text="分享"
+        android:textAllCaps="false"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/but_dial"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="304dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="501dp"
+        android:background="@drawable/student_red_rounded_solid"
+        android:fontFamily="@font/student_calibri"
+        android:text="拨打电话"
+        android:textAllCaps="false"
+        android:textColor="#ffffff" />
 </RelativeLayout>
 
     <!--        android:layout_alignParentBottom="true"-->

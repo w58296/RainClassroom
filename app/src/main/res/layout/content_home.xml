@@ -136,20 +136,14 @@
                             android:orientation="vertical">
 
                         <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="4dp"
-                                android:fontFamily="@font/calibri"
-                                android:text="杨洪源"
-                                android:textColor="#000000"
-                                android:textSize="16sp"/>
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:fontFamily="@font/calibri"
+                            android:text="陈春荣"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
 
-                        <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/calibri"
-                                android:text="无敌小组长"
-                                android:textSize="14sp"/>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -191,16 +185,10 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
                             android:fontFamily="@font/calibri"
-                            android:text="申天宇"
+                            android:text="胡志禹"
                             android:textColor="#000000"
-                            android:textSize="16sp"/>
+                            android:textSize="16sp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/calibri"
-                            android:text="万能CODER"
-                            android:textSize="14sp"/>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -241,16 +229,10 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
                             android:fontFamily="@font/calibri"
-                            android:text="孔德焱"
+                            android:text="汤新宇"
                             android:textColor="#000000"
-                            android:textSize="16sp"/>
+                            android:textSize="16sp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/calibri"
-                            android:text="无敌DEBUGGER"
-                            android:textSize="14sp"/>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -291,73 +273,16 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
                             android:fontFamily="@font/calibri"
-                            android:text="林新宇"
+                            android:text="卓威"
                             android:textColor="#000000"
-                            android:textSize="16sp"/>
+                            android:textSize="16sp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/calibri"
-                            android:text="最帅,是真的！"
-                            android:textSize="14sp"/>
                     </LinearLayout>
 
                 </LinearLayout>
 
 
             </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="4dp"
-                app:cardElevation="4dp"
-                app:cardUseCompatPadding="true"
-                app:contentPadding="16dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="100">
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="60dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_weight="25"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/tou1"/>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_weight="75"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp"
-                            android:fontFamily="@font/calibri"
-                            android:text="李瑾如"
-                            android:textColor="#000000"
-                            android:textSize="16sp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/calibri"
-                            android:text="无敌编辑器"
-                            android:textSize="14sp"/>
-                    </LinearLayout>
-
-                </LinearLayout>
-
-
-            </android.support.v7.widget.CardView>
-
 
 
         </LinearLayout>

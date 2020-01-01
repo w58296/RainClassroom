@@ -1,6 +1,7 @@
 package com.bugcoder.sc.student;
 
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -45,6 +46,7 @@ public class Teacher_Home extends AppCompatActivity
     LinearLayout profile;
     LinearLayout ll_daily_schedule;
     String stuId;
+    String dial ="123456789";
     String courseName;
 
     Vector v = new Vector();
@@ -59,7 +61,16 @@ public class Teacher_Home extends AppCompatActivity
         stuId = temp.getStringExtra("stuId");
         System.out.println("stuId::::::::::::::::::::::::::::::::::");
         System.out.println(stuId);
+        //        System.out.println("到这里");
+        MyReceiver dynamicReceiver  = new MyReceiver();
+        IntentFilter dynamic_filter = new IntentFilter();
+        dynamic_filter.addAction("com.bugcoder.sc.student.myreceiver");
+        registerReceiver(dynamicReceiver, dynamic_filter);
 
+        Intent intent = new Intent("com.bugcoder.sc.student.myreceiver");
+        intent.putExtra("name", "通知");
+//        System.out.println("---------------发送动态广播");
+        sendBroadcast(intent);
         initData();
         initUI();
         Teacher_Schedule s = new Teacher_Schedule("Android", "Zhang Di", "08:00 - 10:00", "YF205", "12 Jul 2019");
@@ -199,6 +210,7 @@ public class Teacher_Home extends AppCompatActivity
                 Intent intent = new Intent(getApplicationContext(), Teacher_CourseLiving.class);
                 intent.putExtra("schedule", schedule);
                 intent.putExtra("stuId",stuId);
+                intent.putExtra("dial",dial);
                 //intent.putExtra("courseName",courseName);
                 startActivity(intent);
             }
@@ -292,6 +304,18 @@ public class Teacher_Home extends AppCompatActivity
         tv_room.setCompoundDrawablePadding(8);
         //tv_teacher_name.setTextSize(14);
         ll_content_2.addView(tv_room);
+
+        TextView tv_dial = new TextView(this);
+        LinearLayout.LayoutParams lp_tv6 = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        lp_tv6.setMargins(0, 0, 0, 16);
+        //lp_tv5.gravity = Gravity.CENTER;
+        tv_dial.setLayoutParams(lp_tv6);
+        tv_dial.setTypeface(typeface);
+        tv_dial.setText(dial);
+        tv_dial.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(R.drawable.ic_location_on_red_24dp), null, null, null);
+        tv_dial.setCompoundDrawablePadding(8);
+        //tv_teacher_name.setTextSize(14);
+        ll_content_2.addView(tv_dial);
     }
 
     @Override
