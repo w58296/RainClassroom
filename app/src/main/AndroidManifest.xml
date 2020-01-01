@@ -23,13 +23,6 @@
         android:roundIcon="@mipmap/student_ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SelectActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
 
         <meta-data
             android:name="com.amap.api.v2.apikey"
@@ -68,7 +61,13 @@
         <activity
             android:name=".Student_LoginScreen"
             android:configChanges="orientation|screenSize"
-            android:theme="@style/MyAppTheme" />
+            android:theme="@style/MyAppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".course.Student_MyTalk"
             android:configChanges="orientation|screenSize"
@@ -89,40 +88,39 @@
         <activity
             android:name=".Student_SplashScreen"
             android:configChanges="orientation|screenSize"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
-        </activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
         <activity
             android:name="com.bugcoder.sc.student.course.Teacher_CourseLiving"
             android:configChanges="orientation|screenSize"
-            android:label="Course Living"/>
+            android:label="Course Living" />
         <activity
             android:name="com.bugcoder.sc.student.Teacher_Announcements"
             android:configChanges="orientation|screenSize"
-            android:label="Announcements"/>
+            android:label="Announcements" />
         <activity
             android:name="com.bugcoder.sc.student.Teacher_Lectures"
             android:configChanges="orientation|screenSize"
-            android:label="Lectures"/>
+            android:label="Lectures" />
         <activity
             android:name="com.bugcoder.sc.student.course.Teacher_Courses"
             android:configChanges="orientation|screenSize"
-            android:label="Courses"/>
+            android:label="Courses" />
         <activity
             android:name="com.bugcoder.sc.student.Teacher_MyProfile"
             android:configChanges="orientation|screenSize"
-            android:label="My Profile"/>
+            android:label="My Profile" />
         <activity
             android:name="com.bugcoder.sc.student.Teacher_Home"
             android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.bugcoder.sc.student.course.Teacher_SignupScreen"
             android:configChanges="orientation|screenSize"
-            android:theme="@style/MyAppTheme"/>
+            android:theme="@style/MyAppTheme" />
         <activity
             android:name="com.bugcoder.sc.student.Teacher_LoginScreen"
             android:configChanges="orientation|screenSize"
-            android:theme="@style/MyAppTheme"/>
+            android:theme="@style/MyAppTheme" />
         <activity
             android:name=".course.Teacher_MyTalk"
             android:configChanges="orientation|screenSize"
@@ -141,8 +139,7 @@
         <activity
             android:name="com.bugcoder.sc.student.Teacher_SplashScreen"
             android:configChanges="orientation|screenSize"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
-        </activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 
 </manifest>
