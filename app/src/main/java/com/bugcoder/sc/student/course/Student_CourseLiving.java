@@ -780,8 +780,8 @@ public class Student_CourseLiving extends AppCompatActivity  implements View.OnC
             danmakuView.setVisibility(View.VISIBLE);
         }else if(view.getId() == R.id.bt_close_talk){
             System.out.println("关闭弹幕");
-            operationLayout.setVisibility(View.GONE);
-            //danmakuView.setVisibility(View.GONE);
+            operationLayout.setVisibility(View.INVISIBLE);
+            danmakuView.setVisibility(View.INVISIBLE);
         } else if(view.getId() == R.id.bt_get_slide){
             System.out.println("发布PPT");
             Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
