@@ -15,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -169,6 +170,14 @@ public class Teacher_Home extends AppCompatActivity
         profile.setOnClickListener(this);
 
         ll_daily_schedule = findViewById(R.id.ll_daily_schedule);
+        int resId = R.drawable.loading;
+        ImageView imageView1 = (ImageView)findViewById(R.id.imageview1);
+        ImageView imageView2 = (ImageView)findViewById(R.id.imageview2);
+        ImageView imageView3 = (ImageView)findViewById(R.id.imageview3);
+        AsynImageLoader asynImageLoader = new AsynImageLoader();
+        asynImageLoader.showImageAsyn(imageView1, "https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=4155608977,302695490&fm=26&gp=0.jpg", resId);
+        asynImageLoader.showImageAsyn(imageView2, "http://img3.imgtn.bdimg.com/it/u=2977379149,1093175528&fm=26&gp=0.jpg", resId);
+        asynImageLoader.showImageAsyn(imageView3, "https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3254800249,3292713977&fm=26&gp=0.jpg", resId);
     }
 
     void addSchedule(final Teacher_Schedule schedule) {

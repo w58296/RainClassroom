@@ -30,22 +30,25 @@
                         android:padding="12dp">
 
                     <ImageView
-                            android:layout_width="200dp"
-                            android:layout_height="150dp"
-                            android:layout_marginRight="4dp"
-                            android:src="@drawable/background"/>
+                        android:id="@+id/imageview1"
+                        android:layout_width="200dp"
+                        android:layout_height="150dp"
+                        android:layout_marginRight="4dp"
+                        android:src="@drawable/background" />
 
                     <ImageView
-                            android:layout_width="200dp"
-                            android:layout_height="150dp"
-                            android:layout_marginRight="4dp"
-                            android:src="@drawable/background"/>
+                        android:id="@+id/imageview2"
+                        android:layout_width="200dp"
+                        android:layout_height="150dp"
+                        android:layout_marginRight="4dp"
+                        android:src="@drawable/background" />
 
                     <ImageView
-                            android:layout_width="200dp"
-                            android:layout_height="150dp"
-                            android:layout_marginRight="4dp"
-                            android:src="@drawable/background"/>
+                        android:id="@+id/imageview3"
+                        android:layout_width="200dp"
+                        android:layout_height="150dp"
+                        android:layout_marginRight="4dp"
+                        android:src="@drawable/background" />
 
                 </LinearLayout>
 

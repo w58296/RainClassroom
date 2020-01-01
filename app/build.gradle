@@ -33,6 +33,6 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
     implementation 'com.github.ctiao:DanmakuFlameMaster:0.5.3'
     implementation 'com.github.jd-alexander:LikeButton:0.2.3'
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation files('libs/AMap_Location_V4.8.0_20191210.jar')
+    implementation files('libs\\open_sdk_r2973327_lite.jar')
 }
