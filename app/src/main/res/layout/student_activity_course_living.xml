@@ -8,29 +8,51 @@
     tools:context=".course.Student_Courses">
 
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <Button
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/student_red_rounded_solid"
+            android:fontFamily="@font/student_calibri"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
             android:id="@+id/bt_get_slide"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:text="发布Slide" />
         <Button
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/student_red_rounded_solid"
+            android:fontFamily="@font/student_calibri"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:text="进入讨论"
             android:id="@+id/bt_to_talk"/>
         <Button
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/student_red_rounded_solid"
+            android:fontFamily="@font/student_calibri"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:text="开启弹幕"
             android:id="@+id/bt_open_talk"/>
+
         <Button
+            android:layout_marginLeft="10dp"
+            android:id="@+id/bt_close_talk"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
+            android:background="@drawable/student_red_rounded_solid"
+            android:fontFamily="@font/student_calibri"
             android:text="关闭弹幕"
-            android:id="@+id/bt_close_talk"/>
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
     </LinearLayout>
 
     <ScrollView
@@ -78,6 +100,11 @@
     </LinearLayout>
 
     <Button
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/student_red_rounded_solid"
+        android:fontFamily="@font/student_calibri"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
         android:id="@+id/bt_release_que"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -85,6 +112,11 @@
         android:layout_below="@+id/danmaku_view"/>
 
     <Button
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/student_red_rounded_solid"
+        android:fontFamily="@font/student_calibri"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
         android:id="@+id/bt_release_paper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -93,6 +125,11 @@
         android:layout_toRightOf="@+id/bt_release_que"/>
 
     <Button
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/student_red_rounded_solid"
+        android:fontFamily="@font/student_calibri"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
         android:id="@+id/bt_release_sign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

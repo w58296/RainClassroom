@@ -59,7 +59,7 @@
             android:configChanges="orientation|screenSize"
             android:theme="@style/MyAppTheme" />
         <activity
-            android:name=".Student_LoginScreen"
+            android:name=".SplashActivity"
             android:configChanges="orientation|screenSize"
             android:theme="@style/MyAppTheme">
             <intent-filter>
@@ -122,6 +122,10 @@
             android:configChanges="orientation|screenSize"
             android:theme="@style/MyAppTheme" />
         <activity
+            android:name="com.bugcoder.sc.student.Student_LoginScreen"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MyAppTheme" />
+        <activity
             android:name=".course.Teacher_MyTalk"
             android:configChanges="orientation|screenSize"
             android:label="讨论区" />
@@ -140,6 +144,52 @@
             android:name="com.bugcoder.sc.student.Teacher_SplashScreen"
             android:configChanges="orientation|screenSize"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 这地方需要用你在开放平台申请的appid:tencent+appid -->
+                <data android:scheme="tencent00000000" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.bugcoder.sc.student.myreceiver" />
+            </intent-filter>
+        </receiver>
+        <activity android:name=".GuideActivity"/>
+
     </application>
 
 </manifest>

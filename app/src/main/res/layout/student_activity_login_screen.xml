@@ -154,6 +154,7 @@
         android:textStyle="bold"/>
 
     <Button
+        android:id="@+id/stu_qq"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_gravity="center"
@@ -161,15 +162,22 @@
         android:layout_marginRight="30dp"
         android:background="@drawable/student_white_rounded_solid"
         android:drawableLeft="@drawable/student_ic_btn_qq"
-        android:paddingLeft="90dp"
-        android:fontFamily="@font/student_calibri"
-        android:text="QQ"
         android:drawablePadding="-90dp"
+        android:fontFamily="@font/student_calibri"
+        android:paddingLeft="90dp"
+        android:text="QQ"
         android:textAllCaps="false"
         android:textColor="#369bce"
         android:textSize="25sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/loginBtn"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+    </com.facebook.login.widget.LoginButton>
 
     <View
         android:layout_height="2px"

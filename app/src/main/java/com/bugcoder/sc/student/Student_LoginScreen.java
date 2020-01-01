@@ -12,6 +12,13 @@ import android.widget.Toast;
 
 import com.bugcoder.sc.student.course.Student_SignupScreen;
 import com.bugcoder.sc.student.course.Teacher_SignupScreen;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.login.LoginManager;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
+import com.tencent.tauth.UiError;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -26,15 +33,17 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class Student_LoginScreen extends AppCompatActivity implements View.OnClickListener {
-
+public class Student_LoginScreen extends AppCompatActivity implements View.OnClickListener, QQLoginManager.QQLoginListener {
+    Button stu_qq;
     Button btn_student_signIn, btn_teacher_signIn;
     TextView tv_signUp1, tv_signUp2;
     TextView tv_login_id;
     TextView tv_login_password;
-
+    private CallbackManager callbackManager;
+    private LoginButton loginButton;
     public static Student_User student_uesr = new Student_User();
     public static Teacher_User teacher_uesr = new Teacher_User();
+    //private QQLoginManager qqLoginManager= new QQLoginManager("", this);;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +59,57 @@ public class Student_LoginScreen extends AppCompatActivity implements View.OnCli
         btn_teacher_signIn.setOnClickListener(this);
         tv_signUp1.setOnClickListener(this);
         tv_signUp2.setOnClickListener(this);
+        stu_qq = findViewById(R.id.stu_qq);
+        stu_qq.setOnClickListener(this);
+        callbackManager = CallbackManager.Factory.create();
+        loginButton = (LoginButton) findViewById(R.id.loginBtn);
+        loginButton.setReadPermissions("email");
+
+        LoginManager.getInstance().registerCallback(callbackManager,
+                new FacebookCallback<LoginResult>() {
+                    @Override
+                    public void onSuccess(LoginResult loginResult) {
+                        // App code
+                    }
+
+                    @Override
+                    public void onCancel() {
+                        // App code
+                    }
+
+                    @Override
+                    public void onError(FacebookException exception) {
+                        // App code
+                    }
+                });
+
+        // Callback registration
+        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                // App code
+            }
+
+            @Override
+            public void onCancel() {
+                // App code
+            }
+
+            @Override
+            public void onError(FacebookException exception) {
+                // App code
+            }
+        });
+
+
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        callbackManager.onActivityResult(requestCode, resultCode, data);
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
 
     @Override
     public void onClick(View view) {
@@ -112,6 +171,9 @@ public class Student_LoginScreen extends AppCompatActivity implements View.OnCli
         } else if (view.getId() == R.id.tv_sign_up2) {
             Intent intent = new Intent(getApplicationContext(), Teacher_SignupScreen.class);
             startActivity(intent);
+        } else if (view.getId() == R.id.stu_qq) {
+            Toast.makeText(getApplicationContext(), "正在登陆!", Toast.LENGTH_SHORT).show();
+            // qqLoginManager.launchQQLogin();
         }
         if (view.getId() == R.id.btn_sign_in2) {
             String id = tv_login_id.getText().toString();
@@ -236,5 +298,24 @@ public class Student_LoginScreen extends AppCompatActivity implements View.OnCli
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+
+    @Override
+    public void onQQLoginSuccess(JSONObject jsonObject, QQLoginManager.UserAuthInfo authInfo) {
+        // 登录成功
+        Intent intent = new Intent(getApplicationContext(), Student_Home.class);
+        intent.putExtra("stuId", "1");
+        startActivity(intent);
+    }
+
+    @Override
+    public void onQQLoginCancel() {
+        // 登录取消
+    }
+
+    @Override
+    public void onQQLoginError(UiError uiError) {
+        // 登录出错
     }
 }
