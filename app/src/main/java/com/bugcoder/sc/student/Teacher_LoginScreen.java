@@ -39,7 +39,7 @@ public class Teacher_LoginScreen extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
         btn_signIn = findViewById(R.id.btn_sign_in);
-        tv_signUp = findViewById(R.id.tv_sign_up);
+        tv_signUp = findViewById(R.id.tv_sign_up1);
         tv_login_id = findViewById(R.id.tv_login_id);
         tv_login_password = findViewById(R.id.tv_login_password);
         btn_signIn.setOnClickListener(this);
@@ -100,7 +100,7 @@ public class Teacher_LoginScreen extends AppCompatActivity implements View.OnCli
                 });
             }
 
-        } else if (view.getId() == R.id.tv_sign_up) {
+        } else if (view.getId() == R.id.tv_sign_up1) {
             Intent intent = new Intent(getApplicationContext(), Teacher_SignupScreen.class);
             startActivity(intent);
         }
