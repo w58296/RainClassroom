@@ -12,6 +12,12 @@ import android.widget.Toast;
 
 import com.bugcoder.sc.student.course.Student_SignupScreen;
 import com.bugcoder.sc.student.course.Teacher_SignupScreen;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.login.LoginManager;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -32,7 +38,8 @@ public class Student_LoginScreen extends AppCompatActivity implements View.OnCli
     TextView tv_signUp1, tv_signUp2;
     TextView tv_login_id;
     TextView tv_login_password;
-
+    private CallbackManager callbackManager;
+    private LoginButton loginButton;
     public static Student_User student_uesr = new Student_User();
     public static Teacher_User teacher_uesr = new Teacher_User();
 
@@ -50,7 +57,57 @@ public class Student_LoginScreen extends AppCompatActivity implements View.OnCli
         btn_teacher_signIn.setOnClickListener(this);
         tv_signUp1.setOnClickListener(this);
         tv_signUp2.setOnClickListener(this);
+
+        callbackManager = CallbackManager.Factory.create();
+        loginButton = (LoginButton) findViewById(R.id.loginBtn);
+        loginButton.setReadPermissions("email");
+
+        LoginManager.getInstance().registerCallback(callbackManager,
+                new FacebookCallback<LoginResult>() {
+                    @Override
+                    public void onSuccess(LoginResult loginResult) {
+                        // App code
+                    }
+
+                    @Override
+                    public void onCancel() {
+                        // App code
+                    }
+
+                    @Override
+                    public void onError(FacebookException exception) {
+                        // App code
+                    }
+                });
+
+        // Callback registration
+        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                // App code
+            }
+
+            @Override
+            public void onCancel() {
+                // App code
+            }
+
+            @Override
+            public void onError(FacebookException exception) {
+                // App code
+            }
+        });
+
+
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        callbackManager.onActivityResult(requestCode, resultCode, data);
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+
 
     @Override
     public void onClick(View view) {
