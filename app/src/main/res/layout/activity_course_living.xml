@@ -8,34 +8,59 @@
     tools:context=".course.Teacher_Courses">
 
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <Button
+            android:layout_marginLeft="10dp"
+            android:id="@+id/bt_get_slide"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
+            android:background="@drawable/student_red_rounded_solid"
+            android:fontFamily="@font/student_calibri"
             android:text="获取Slide"
-            android:id="@+id/bt_get_slide"/>
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+
         <Button
+            android:layout_marginLeft="10dp"
+            android:id="@+id/bt_to_talk"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
+            android:background="@drawable/student_red_rounded_solid"
+            android:fontFamily="@font/student_calibri"
             android:text="进入讨论"
-            android:id="@+id/bt_to_talk"/>
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+
         <Button
+            android:layout_marginLeft="10dp"
+            android:id="@+id/bt_open_talk"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
+            android:background="@drawable/student_red_rounded_solid"
+            android:fontFamily="@font/student_calibri"
             android:text="开启弹幕"
-            android:id="@+id/bt_open_talk"/>
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+
         <Button
+            android:layout_marginLeft="10dp"
+            android:id="@+id/bt_close_talk"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
+            android:background="@drawable/student_red_rounded_solid"
+            android:fontFamily="@font/student_calibri"
             android:text="关闭弹幕"
-            android:id="@+id/bt_close_talk"/>
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
     </LinearLayout>
 
     <ScrollView
-        android:layout_marginTop="40dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp">
 
         <LinearLayout
             android:id="@+id/course_list"
