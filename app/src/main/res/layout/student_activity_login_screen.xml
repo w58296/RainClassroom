@@ -86,7 +86,7 @@
         android:textStyle="bold"/>
 
     <LinearLayout
-        android:layout_width="435dp"
+        android:layout_width="match_parent"
         android:layout_height="49dp"
         android:orientation="horizontal">
 
@@ -112,7 +112,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="8dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="12dp"
@@ -196,7 +196,8 @@
 
         <TextView
             android:id="@+id/tv_sign_up1"
-            android:layout_width="192dp"
+            android:layout_marginLeft="60dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/student_calibri"
             android:text="student sign up"
@@ -205,9 +206,9 @@
 
         <TextView
             android:id="@+id/tv_sign_up2"
+            android:layout_marginLeft="100dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:fontFamily="@font/student_calibri"
             android:text="teacher sign up"
             android:textColor="#ff0000"
