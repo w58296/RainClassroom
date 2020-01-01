@@ -118,10 +118,6 @@
             android:configChanges="orientation|screenSize"
             android:theme="@style/MyAppTheme" />
         <activity
-            android:name="com.bugcoder.sc.student.Teacher_LoginScreen"
-            android:configChanges="orientation|screenSize"
-            android:theme="@style/MyAppTheme" />
-        <activity
             android:name="com.bugcoder.sc.student.Student_LoginScreen"
             android:configChanges="orientation|screenSize"
             android:theme="@style/MyAppTheme" />

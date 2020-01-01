@@ -18,7 +18,7 @@ public class Teacher_SplashScreen extends AppCompatActivity {
             public void run() {
                 try {
                     sleep(1300);
-                    Intent i = new Intent(Teacher_SplashScreen.this, Teacher_LoginScreen.class);
+                    Intent i = new Intent(Teacher_SplashScreen.this, Student_LoginScreen.class);
                     startActivity(i);
                     finish();
                 } catch (Exception e) {
