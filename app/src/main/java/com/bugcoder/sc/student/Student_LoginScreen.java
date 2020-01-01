@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bugcoder.sc.student.course.Student_SignupScreen;
+import com.bugcoder.sc.student.course.Teacher_SignupScreen;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -28,7 +29,7 @@ import okhttp3.Response;
 public class Student_LoginScreen extends AppCompatActivity implements View.OnClickListener {
 
     Button btn_student_signIn, btn_teacher_signIn;
-    TextView tv_signUp;
+    TextView tv_signUp1, tv_signUp2;
     TextView tv_login_id;
     TextView tv_login_password;
 
@@ -41,12 +42,14 @@ public class Student_LoginScreen extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.student_activity_login_screen);
         btn_student_signIn = findViewById(R.id.btn_sign_in);
         btn_teacher_signIn = findViewById(R.id.btn_sign_in2);
-        tv_signUp = findViewById(R.id.tv_sign_up);
+        tv_signUp1 = findViewById(R.id.tv_sign_up1);
+        tv_signUp2 = findViewById(R.id.tv_sign_up2);
         tv_login_id = findViewById(R.id.tv_login_id);
         tv_login_password = findViewById(R.id.tv_login_password);
         btn_student_signIn.setOnClickListener(this);
         btn_teacher_signIn.setOnClickListener(this);
-        tv_signUp.setOnClickListener(this);
+        tv_signUp1.setOnClickListener(this);
+        tv_signUp2.setOnClickListener(this);
     }
 
     @Override
@@ -103,8 +106,11 @@ public class Student_LoginScreen extends AppCompatActivity implements View.OnCli
                 });
             }
 
-        } else if (view.getId() == R.id.tv_sign_up) {
+        } else if (view.getId() == R.id.tv_sign_up1) {
             Intent intent = new Intent(getApplicationContext(), Student_SignupScreen.class);
+            startActivity(intent);
+        } else if (view.getId() == R.id.tv_sign_up2) {
+            Intent intent = new Intent(getApplicationContext(), Teacher_SignupScreen.class);
             startActivity(intent);
         }
         if (view.getId() == R.id.btn_sign_in2) {
@@ -151,7 +157,7 @@ public class Student_LoginScreen extends AppCompatActivity implements View.OnCli
                     @Override
                     public void onResponse(Call call, Response response) throws IOException {
                         Message msg = myHandler.obtainMessage();
-                        msg.what = 1;
+                        msg.what = 2;
                         msg.obj = response.body().string();
                         myHandler.sendMessage(msg);
                         System.out.println("Handle发送：" + msg.obj);
@@ -165,11 +171,20 @@ public class Student_LoginScreen extends AppCompatActivity implements View.OnCli
     Handler myHandler = new Handler() {
         public void handleMessage(Message msg) {
             switch (msg.what) {
-                case 1:
+                case 2:
                     try {
                         System.out.println("获得handle事件");
                         System.out.println("Handle处理：" + msg.obj);
                         parseJsonWithJsonObject((String) msg.obj);
+                    } catch (IOException e) {
+
+                    }
+                    break;
+                case 1:
+                    try {
+                        System.out.println("获得handle事件");
+                        System.out.println("Handle处理：" + msg.obj);
+                        parseJsonWithJsonObject2((String) msg.obj);
                     } catch (IOException e) {
 
                     }
@@ -193,7 +208,23 @@ public class Student_LoginScreen extends AppCompatActivity implements View.OnCli
                 startActivity(intent);
 
                 this.finish();
-            } else if (check.equals("stu")) {
+            } else {
+                Toast.makeText(getApplicationContext(), "ID or Password is Wrong!", Toast.LENGTH_SHORT).show();
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void parseJsonWithJsonObject2(String responseData) throws IOException {
+
+        System.out.println("开始解析json" + responseData);
+
+        try {
+            JSONObject jsonObject = new JSONObject(responseData);
+//            uesr.setId(jsonObject.getString("data"));
+            String check = jsonObject.getString("check");
+            if (check.equals("stu")) {
                 Intent intent = new Intent(getApplicationContext(), Teacher_Home.class);
                 intent.putExtra("stuId", tv_login_id.getText().toString());
                 startActivity(intent);

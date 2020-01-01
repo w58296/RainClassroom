@@ -173,7 +173,7 @@
                 android:textSize="16dp"/>
 
         <TextView
-                android:id="@+id/tv_sign_up"
+                android:id="@+id/tv_sign_up1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sign up now"

@@ -43,9 +43,8 @@
             android:drawablePadding="16dp"
             android:fontFamily="@font/student_calibri"
             android:hint="ID"
-            android:text="2"
             android:inputType="textEmailAddress"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -66,10 +65,9 @@
             android:drawablePadding="16dp"
             android:fontFamily="@font/student_calibri"
             android:hint="Password"
-            android:text="2"
             android:inputType="textPassword"
             android:maxLines="1"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
     </android.support.design.widget.TextInputLayout>
 
     <TextView
@@ -189,22 +187,23 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/tv_sign_up1"
+            android:layout_width="192dp"
             android:layout_height="wrap_content"
-            android:text="Not registered yet? "
-            android:layout_marginLeft="30dp"
             android:fontFamily="@font/student_calibri"
-            android:textColor="#a6a6a6"
-            android:textSize="16dp"/>
+            android:text="student sign up"
+            android:textColor="#ff0000"
+            android:textSize="16dp" />
 
         <TextView
-            android:id="@+id/tv_sign_up"
+            android:id="@+id/tv_sign_up2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign up now"
+            android:layout_weight="1"
             android:fontFamily="@font/student_calibri"
+            android:text="teacher sign up"
             android:textColor="#ff0000"
-            android:textSize="16dp"/>
+            android:textSize="16dp" />
     </LinearLayout>
 
 </LinearLayout>
