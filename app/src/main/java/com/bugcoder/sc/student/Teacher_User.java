@@ -5,6 +5,7 @@ public class Teacher_User {
     public String IP ="http://192.168.3.70:8080";
 
     public Teacher_User() {
+
     }
 
     public String getId() {

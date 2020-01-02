@@ -670,10 +670,7 @@ public class Teacher_CourseLiving extends AppCompatActivity  implements View.OnC
     }
     //base64转为bitmap
     public static Bitmap base64ToBitmap(String base64Data) {
-        Decoder decoder = java.util.Base64.getDecoder();
-        byte[] bytes = base64Data.getBytes();
-
-        decoder.decode(bytes);
+        byte[] bytes = Base64.decode(base64Data, Base64.DEFAULT);
         return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
     }
 
