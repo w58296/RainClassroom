@@ -5,7 +5,7 @@ import android.content.Context;
 import cn.sharesdk.onekeyshare.OnekeyShare;
 
 public class ShareApi {
-    private void showShare(Context context) {
+    public static void showShare(Context context) {
         OnekeyShare oks = new OnekeyShare();
         // title标题，微信、QQ和QQ空间等平台使用
         oks.setTitle("分享");
