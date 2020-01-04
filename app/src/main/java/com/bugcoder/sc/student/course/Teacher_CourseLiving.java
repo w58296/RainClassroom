@@ -8,6 +8,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -28,6 +29,7 @@ import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
 import com.bugcoder.sc.student.R;
+import com.bugcoder.sc.student.ShareApi;
 import com.bugcoder.sc.student.Teacher_User;
 
 import org.json.JSONException;
@@ -41,6 +43,7 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Random;
 import java.util.Vector;
+import java.util.Base64.Decoder;
 
 import master.flame.danmaku.controller.DrawHandler;
 import master.flame.danmaku.danmaku.model.BaseDanmaku;
@@ -111,6 +114,26 @@ public class Teacher_CourseLiving extends AppCompatActivity  implements View.OnC
         courseName = temp.getStringExtra("courseName");
         count = 0;
         initUI();
+
+        Button shareBtn = findViewById(R.id.but_share);
+        shareBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ShareApi.showShare(getApplicationContext());
+            }
+        });
+
+        Button dialBtn = findViewById(R.id.but_dial);
+        dialBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                Uri data = Uri.parse("tel:" + "110");
+                intent.setData(data);
+                startActivity(intent);
+            }
+        });
+
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
